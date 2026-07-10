@@ -378,7 +378,7 @@
     a:'a', 'ă':'ah', 'â':'er', b:'b', c:'c', d:'z', 'đ':'d', e:'e', 'ê':'eh',
     g:'g', h:'h', i:'i', k:'k', l:'l', m:'m', n:'n', o:'o', 'ô':'oh',
     'ơ':'er', p:'p', q:'q', r:'r', s:'s', t:'t', u:'u', 'ư':'uh', v:'v',
-    x:'x', y:'y'
+    x:'s', y:'y'
   };
 
   const TONE_SUFFIX = {
@@ -449,7 +449,22 @@
       ["ướm", "uer'm"],
       ["ngh", "ng"],
       ["iện", "ienj"],
-      ["uất", "uat"]
+      ["uất", "uat"],
+    ["ẩm", "uhm"],
+    ["án", "a'n"],
+    ["uật", "uatj"],
+    ["ế", "e'"],
+    ["ăm", "um"],
+    ["ứ", "uh'"],
+    ["iên", "ien"],
+    ["ập", "upj"],
+    ["ực", "ucj"],
+    ["ó", "o'"],
+    ["ười", "er'i"],
+    ["ắn", "un'"],
+    ["ố", "oh'"],
+    ["ứng", "uhn'"],
+    ["ái", "ai'"]
   ].sort((a, b) => b[0].length - a[0].length);
 
   function applySpecialRules(text) {
