@@ -9,321 +9,152 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#faf6ee;
-    --ink-soft:#f1e9d8;
-    --paper:#fffdf8;
-    --paper-dim:#e8dfc9;
-    --lacquer:#a6323d;
-    --lacquer-dark:#7e2530;
-    --gold:#a97c22;
-    --text-ink:#221d17;
-    --muted:#867a63;
-    --muted-light:#5c5343;
+    --ink:#faf6ee;    --ink-soft:#f1e9d8;    --paper:#fffdf8;    --paper-dim:#e8dfc9;    --lacquer:#a6323d;
+    --lacquer-dark:#7e2530;    --gold:#a97c22;    --text-ink:#221d17;    --muted:#867a63;    --muted-light:#5c5343;
   }
-
   *{box-sizing:border-box;}
 
   body{
-    margin:0;
-    background:var(--ink);
-    background-image:
-      radial-gradient(circle at 15% 10%, rgba(169,124,34,0.10), transparent 40%),
-      radial-gradient(circle at 85% 90%, rgba(166,50,61,0.08), transparent 45%);
-    color:var(--text-ink);
-    font-family:'Inter', sans-serif;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:56px 20px 80px;
+    margin:0;    background:var(--ink);    background-image:      radial-gradient(circle at 15% 10%, rgba(169,124,34,0.10), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(166,50,61,0.08), transparent 45%);    color:var(--text-ink);    font-family:'Inter', sans-serif;
+    min-height:100vh;    display:flex;    flex-direction:column;    align-items:center;    padding:56px 20px 80px;
   }
-
   header{
-    text-align:center;
-    max-width:640px;
-    margin-bottom:44px;
+    text-align:center;    max-width:640px;    margin-bottom:44px;
   }
-
   .eyebrow{
-    font-family:'JetBrains Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--gold);
-    margin-bottom:14px;
+    font-family:'JetBrains Mono', monospace;    font-size:12px;    letter-spacing:0.18em;    text-transform:uppercase;
+    color:var(--gold);    margin-bottom:14px;
   }
-
   h1{
-    font-family:'Fraunces', serif;
-    font-weight:700;
-    font-size:clamp(32px, 5vw, 48px);
-    line-height:1.1;
-    margin:0 0 14px;
-    color:var(--text-ink);
+    font-family:'Fraunces', serif;    font-weight:700;    font-size:clamp(32px, 5vw, 48px);    line-height:1.1;
+    margin:0 0 14px;    color:var(--text-ink);
   }
-
   h1 em{
-    font-style:italic;
-    font-weight:500;
-    color:var(--lacquer);
+    font-style:italic;    font-weight:500;    color:var(--lacquer);
     background:linear-gradient(180deg, transparent 62%, rgba(166,50,61,0.35) 62%);
   }
-
   header p{
-    font-size:15px;
-    line-height:1.6;
-    color:var(--muted-light);
-    margin:0;
+    font-size:15px;    line-height:1.6;    color:var(--muted-light);    margin:0;
   }
-
   main{
-    width:100%;
-    max-width:1080px;
+    width:100%;    max-width:1080px;
   }
-
   .panels{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+    display:grid;    grid-template-columns:1fr 1fr;    gap:20px;
   }
-
   .panel{
-    background:var(--paper);
-    border:1px solid var(--paper-dim);
-    border-radius:10px;
-    padding:20px 22px 22px;
-    display:flex;
-    flex-direction:column;
-    box-shadow:0 20px 40px -24px rgba(90,70,40,0.35);
+    background:var(--paper);    border:1px solid var(--paper-dim);    border-radius:10px;    padding:20px 22px 22px;
+    display:flex;    flex-direction:column;    box-shadow:0 20px 40px -24px rgba(90,70,40,0.35);
     position:relative;
   }
-
   .panel-label{
-    font-family:'JetBrains Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--muted);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:10px;
+    font-family:'JetBrains Mono', monospace;    font-size:11px;    letter-spacing:0.12em;    text-transform:uppercase;
+    color:var(--muted);    display:flex;    justify-content:space-between;    align-items:center;    margin-bottom:10px;
   }
-
   .panel-label .num{
-    color:var(--lacquer);
-    font-weight:500;
+    color:var(--lacquer);    font-weight:500;
   }
-
   textarea{
-    flex:1;
-    min-height:260px;
-    resize:vertical;
-    border:1px solid var(--paper-dim);
-    border-radius:6px;
-    background:#fffefb;
-    color:var(--text-ink);
-    padding:14px 16px;
-    font-size:16px;
-    line-height:1.55;
-    outline:none;
-    transition:border-color 0.15s ease;
+    flex:1;    min-height:260px;    resize:vertical;    border:1px solid var(--paper-dim);    border-radius:6px;
+    background:#fffefb;    color:var(--text-ink);    padding:14px 16px;    font-size:16px;    line-height:1.55;
+    outline:none;    transition:border-color 0.15s ease;
   }
-
   #inputBox{
-    font-family:monospace;
-    font-weight:400;
+    font-family:monospace;    font-weight:400;
   }
-
   #outputBox{
-    font-family:'JetBrains Mono', monospace;
-    font-size:14.5px;
-    background:#f9f5ea;
+    font-family:'JetBrains Mono', monospace;    font-size:14.5px;    background:#f9f5ea;
   }
-
   textarea:focus{
     border-color:var(--lacquer);
   }
-
   textarea[readonly]{
     color:var(--text-ink);
   }
-
   .char-count{
-    font-family:'JetBrains Mono', monospace;
-    font-size:11px;
-    color:var(--muted);
-    margin-top:8px;
+    font-family:'JetBrains Mono', monospace;    font-size:11px;    color:var(--muted);    margin-top:8px;
     text-align:right;
   }
-
   .copy-btn{
-    position:absolute;
-    top:18px;
-    right:22px;
-    font-family:'JetBrains Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.05em;
-    background:none;
-    border:1px solid var(--paper-dim);
-    color:var(--muted);
-    padding:4px 10px;
-    border-radius:20px;
-    cursor:pointer;
-    transition:all 0.15s ease;
+    position:absolute;    top:18px;    right:22px;    font-family:'JetBrains Mono', monospace;    font-size:11px;
+    letter-spacing:0.05em;    background:none;    border:1px solid var(--paper-dim);    color:var(--muted);
+    padding:4px 10px;    border-radius:20px;    cursor:pointer;    transition:all 0.15s ease;
   }
-
   .copy-btn:hover{
-    border-color:var(--lacquer);
-    color:var(--lacquer);
+    border-color:var(--lacquer);    color:var(--lacquer);
   }
-
   .copy-btn.copied{
-    border-color:#4a7c59;
-    color:#4a7c59;
+    border-color:#4a7c59;    color:#4a7c59;
   }
-
   .convert-row{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:22px;
-    margin:34px 0 8px;
+    display:flex;    justify-content:center;    align-items:center;    gap:22px;    margin:34px 0 8px;
   }
-
   .sample-btn{
-    font-family:'JetBrains Mono', monospace;
-    font-size:12.5px;
-    letter-spacing:0.05em;
-    background:var(--paper);
-    border:1px solid var(--paper-dim);
-    color:var(--muted-light);
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:all 0.15s ease;
-    box-shadow:0 10px 20px -14px rgba(90,70,40,0.4);
+    font-family:'JetBrains Mono', monospace;    font-size:12.5px;    letter-spacing:0.05em;    background:var(--paper);
+    border:1px solid var(--paper-dim);    color:var(--muted-light);    padding:12px 20px;    border-radius:8px;
+    cursor:pointer;    transition:all 0.15s ease;    box-shadow:0 10px 20px -14px rgba(90,70,40,0.4);
   }
-
   .sample-btn:hover{
-    border-color:var(--gold);
-    color:var(--gold);
+    border-color:var(--gold);    color:var(--gold);
   }
-
   .sample-btn:active{
     transform:scale(0.97);
   }
-
   .sample-btn:disabled{
-    opacity:0.55;
-    cursor:wait;
+    opacity:0.55;    cursor:wait;
   }
-
   .seal-btn{
-    width:104px;
-    height:104px;
-    border-radius:50%;
-    border:2.5px solid var(--gold);
-    background:var(--lacquer);
-    color:var(--paper);
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size:15px;
-    letter-spacing:0.02em;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    transform:rotate(-4deg);
-    box-shadow:0 14px 28px -12px rgba(166,50,61,0.55), inset 0 0 0 3px rgba(255,253,248,0.18);
-    transition:transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-    line-height:1.25;
+    width:104px;    height:104px;    border-radius:50%;    border:2.5px solid var(--gold);    background:var(--lacquer);
+    color:var(--paper);    font-family:'Fraunces', serif;    font-weight:600;    font-size:15px;    letter-spacing:0.02em;
+    cursor:pointer;    display:flex;    align-items:center;    justify-content:center;    text-align:center;
+    transform:rotate(-4deg);    box-shadow:0 14px 28px -12px rgba(166,50,61,0.55), inset 0 0 0 3px rgba(255,253,248,0.18);
+    transition:transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;    line-height:1.25;
     position:relative;
   }
-
   .seal-btn::after{
-    content:'';
-    position:absolute;
-    inset:8px;
-    border:1px solid rgba(247,243,234,0.35);
+    content:'';    position:absolute;    inset:8px;    border:1px solid rgba(247,243,234,0.35);
     border-radius:50%;
   }
-
   .seal-btn:hover{
-    transform:rotate(0deg) scale(1.04);
-    background:var(--lacquer-dark);
+    transform:rotate(0deg) scale(1.04);    background:var(--lacquer-dark);
     box-shadow:0 18px 34px -12px rgba(166,50,61,0.65), inset 0 0 0 3px rgba(255,253,248,0.22);
   }
-
   .seal-btn:active{
     transform:rotate(0deg) scale(0.97);
   }
-
   .hint{
-    text-align:center;
-    font-size:12.5px;
-    color:var(--muted);
-    margin-bottom:48px;
+    text-align:center;    font-size:12.5px;    color:var(--muted);    margin-bottom:48px;
   }
-
   details{
-    background:var(--ink-soft);
-    border:1px solid var(--paper-dim);
-    border-radius:10px;
+    background:var(--ink-soft);    border:1px solid var(--paper-dim);    border-radius:10px;
     padding:16px 20px;
   }
-
   summary{
-    cursor:pointer;
-    font-family:'JetBrains Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--gold);
-    outline:none;
+    cursor:pointer;    font-family:'JetBrains Mono', monospace;    font-size:12px;    letter-spacing:0.1em;
+    text-transform:uppercase;    color:var(--gold);    outline:none;
   }
-
   .legend{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
-    gap:8px 18px;
-    margin-top:18px;
-    font-family:'JetBrains Mono', monospace;
-    font-size:13px;
+    display:grid;    grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));    gap:8px 18px;
+    margin-top:18px;    font-family:'JetBrains Mono', monospace;    font-size:13px;
   }
-
   .legend-item{
-    display:flex;
-    justify-content:space-between;
-    color:var(--muted-light);
-    border-bottom:1px dashed rgba(169,124,34,0.25);
-    padding-bottom:4px;
+    display:flex;    justify-content:space-between;    color:var(--muted-light);
+    border-bottom:1px dashed rgba(169,124,34,0.25);    padding-bottom:4px;
   }
-
   .legend-item span:first-child{ color:var(--text-ink); }
   .legend-item span:last-child{ color:var(--lacquer); }
 
   .tone-legend{
-    margin-top:20px;
-    padding-top:16px;
-    border-top:1px solid var(--paper-dim);
+    margin-top:20px;    padding-top:16px;    border-top:1px solid var(--paper-dim);
   }
-
   .tone-legend h3{
-    font-family:'Inter', sans-serif;
-    font-size:12px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--muted);
-    margin:0 0 12px;
-    font-weight:500;
+    font-family:'Inter', sans-serif;    font-size:12px;    letter-spacing:0.1em;    text-transform:uppercase;
+    color:var(--muted);    margin:0 0 12px;    font-weight:500;
   }
-
   @media (max-width: 720px){
     .panels{ grid-template-columns:1fr; }
   }
-
   @media (prefers-reduced-motion: reduce){
     .seal-btn, .copy-btn{ transition:none; }
   }
@@ -360,7 +191,7 @@
   <div class="hint">Conversion only runs when you press the seal — edits to the left won't auto-update the right.</div>
 
   <details>
-    <summary>View conversion rules (Many pronunciations are case-based similar to English)</summary>
+    <summary>View conversion rules (Many pronunciations are case-based similar to English, <u>join sounds</u> for shorter text)</summary>
     <div class="tone-legend" style="margin-top:0; padding-top:0; border-top:none;">
       <h3>Special rules (applied first)</h3>
       <div class="legend" id="specialLegend"></div>
@@ -378,15 +209,15 @@
     a:'a', 'ă':'ah', 'â':'er', b:'b', c:'c', d:'z', 'đ':'d', e:'e', 'ê':'eh',
     g:'g', h:'h', i:'i', k:'k', l:'l', m:'m', n:'n', o:'o', 'ô':'oh',
     'ơ':'er', p:'p', q:'q', r:'r', s:'s', t:'t', u:'u', 'ư':'uh', v:'v',
-    x:'s', y:'y'
+    x:'x', y:'y'
   };
 
   const TONE_SUFFIX = {
     0x0300: 'n', // huyền (grave)
     0x0301: 'k', // sắc (acute)
-    0x0309: 'h', // hỏi (hook above)
+    0x0309: 'h', // hỏi (hook)
     0x0303: 'x', // ngã (tilde)
-    0x0323: 'j'  // nặng (dot below)
+    0x0323: 'j'  // nặng (dot)
   };
 
   const TONE_LABELS = [
@@ -440,6 +271,9 @@
   }
 
   const SPECIAL_RULES = [
+    // words
+     ["không", "ko"],
+    
     // 4 letters
      ["ượng", "uongj"],
 
@@ -449,7 +283,8 @@
     ["ính", "ink'"],    ["ũng", "ungx"],   ["iễn", "ienx"],    ["ược", "uocj"],    ["ững", "unx"],    ["ước", "uok"],
     ["ích", "ik"],    ["uyển", "uenh"], ["uyện", "uenj"], ["uần", "uann"], ["uôn", "uon"], ["ịch", "icj"],
      ["iển", "ienh"], ["uyện", "uenj"], ["ương", "uong"], ["iền", "ienn"], ["iệu", "ieuj"], ["uốc", "uok"],
-     ["iều", "ieun"],
+     ["iều", "ieun"], ["ường", "uongn"], ["uyên", "uen"], ["iệp", "iep"], ["ưởng", "uongh"], ["anh", "ank"],
+     ["uyền", "uenn"], ["ưới", "er'i"],
 
     // 2 letters
     ["ận", "enj"],    ["ác", "ak"],    ["tr", "ch"],    ["áy", "ay'"],        ["át", "at"],        ["ữa", "uax"],
@@ -457,9 +292,12 @@
     ["ẩm", "uhm"],    ["án", "a'n"],        ["ăm", "um"],        ["ập", "upj"],    ["ực", "ucj"],    ["ắn", "un'"],
     ["ái", "ai'"],    ["ật", "utj"],    ["ời", "er'n"],    ["âu", "au"],    ["ớp", "erp"],    ["ất", "ut"],
     ["ầu", "aun"], ["ấn", "ern'"], ["ắm", "um'"], ["ắc", "uk"], ["ía", "ia'"], ["ồm", "ohmn"], ["ạt", "atj"],
+     ["ặc", "acj"], ["áo", "ao'"], ["ởi", "oih"], ["áp", "ap"], ["ph", "f"], ["ửa", "uah"], ["êu", "eu"],
+     ["ốc", "ok"],
 
     // 1 letter
     ["ế", "e'"],    ["ứ", "uh'"],    ["ó", "o'"],    ["ố", "oh'"],    ["ữ", "ux"],    ["é", "e'"],
+     ["á", "a'"],
   ].sort((a, b) => b[0].length - a[0].length);
 
   function applySpecialRules(text) {
