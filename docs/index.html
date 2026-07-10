@@ -131,7 +131,7 @@
   }
 
   #inputBox{
-    font-family:'Fraunces', serif;
+    font-family:monospace;
     font-weight:400;
   }
 
@@ -440,31 +440,45 @@
   }
 
   const SPECIAL_RULES = [
+    // 4 letters
+
+    // 3 letters
     ['iệt', 'ietj'],
+    ["ướm", "uer'm"],
+    ["iện", "ienj"],
+    ["uất", "uat"],
+    ["uật", "uatj"],
+    ["ngh", "ng"],
+    ["iên", "ien"],
+    ["ười", "er'i"],
+    ["ứng", "uhn'"],
+    ["uộc", "uocj"],
+    ["iểu", "ieuh"],
+    ["ính", "ink'"],
+    ["ũng", "ungx"],
+
+    // 2 letters
     ['ây', 'ay'],
     ['ội', 'oij'],
     ['ằm', 'umn'],
-      ['là', 'la'],
-      ['ột', 'otj'],
-      ["ướm", "uer'm"],
-      ["ngh", "ng"],
-      ["iện", "ienj"],
-      ["uất", "uat"],
+    ['là', 'la'],
+    ['ột', 'otj'],
     ["ẩm", "uhm"],
-    ["án", "a'n"],
-    ["uật", "uatj"],
-    ["ế", "e'"],
-    ["ăm", "um"],
-    ["ứ", "uh'"],
-    ["iên", "ien"],
+    ["án", "a'n"],    
+    ["ăm", "um"],    
     ["ập", "upj"],
     ["ực", "ucj"],
-    ["ó", "o'"],
-    ["ười", "er'i"],
     ["ắn", "un'"],
+    ["ái", "ai'"],
+    ["ật", "utj"],
+    ["ời", "er'n"],
+    ["âu", "au"],
+
+    // 1 letter
+    ["ế", "e'"],
+    ["ứ", "uh'"],
+    ["ó", "o'"],
     ["ố", "oh'"],
-    ["ứng", "uhn'"],
-    ["ái", "ai'"]
   ].sort((a, b) => b[0].length - a[0].length);
 
   function applySpecialRules(text) {
