@@ -191,7 +191,7 @@
   <div class="hint">Conversion only runs when you press the seal — edits to the left won't auto-update the right.</div>
 
   <details>
-    <summary>View conversion rules (Many pronunciations are case-based similar to English, <u>join sounds</u> for shorter text)</summary>
+    <summary>View conversion rules (Many spellings are case-based similar to English, <u>join sounds</u> for shorter text)</summary>
     <div class="tone-legend" style="margin-top:0; padding-top:0; border-top:none;">
       <h3>Special rules (applied first)</h3>
       <div class="legend" id="specialLegend"></div>
@@ -272,32 +272,40 @@
 
   const SPECIAL_RULES = [
     // words
-     ["không", "ko"],
+     ["không", "ko"], ["sẽ", "ses"], ["và", "va"], ["của", "cua"], ["ít", "it"],
+      ["nhà", "ya"], ["về", "ve"], ["trò", "cho"], ["trà", "ja"],
     
     // 4 letters
-     ["ượng", "uongj"],
+     ["ượng", "uongj"],["uyệt", "uetj"], ["uyết", "uet"],["oảng", "oangh"], ["ướng", "uonk"],
 
     // 3 letters
     ['iệt', 'ietj'],    ["ướm", "uer'm"],    ["iện", "ienj"],    ["uất", "uat"],    ["uật", "uatj"],    ["ngh", "ng"],
-    ["iên", "ien"],    ["ười", "er'i"],    ["ứng", "uhn'"],    ["uộc", "uocj"],    ["iểu", "ieuh"],    ["ách", "ack"],
+    ["iên", "ien"],    ["ười", "er'i"],    ["ứng", "uhn'"],    ["uộc", "uoj"],    ["iểu", "ieuh"],    ["ách", "ack"],
     ["ính", "ink'"],    ["ũng", "ungx"],   ["iễn", "ienx"],    ["ược", "uocj"],    ["ững", "unx"],    ["ước", "uok"],
     ["ích", "ik"],    ["uyển", "uenh"], ["uyện", "uenj"], ["uần", "uann"], ["uôn", "uon"], ["ịch", "icj"],
      ["iển", "ienh"], ["uyện", "uenj"], ["ương", "uong"], ["iền", "ienn"], ["iệu", "ieuj"], ["uốc", "uok"],
      ["iều", "ieun"], ["ường", "uongn"], ["uyên", "uen"], ["iệp", "iep"], ["ưởng", "uongh"], ["anh", "ank"],
-     ["uyền", "uenn"], ["ưới", "er'i"],
+     ["uyền", "uenn"], ["ưới", "er'i"], ["iểm", "iemh"], ["ừng", "uhn"], ["ông", "ong"], ["ồng", "ongn"],
+      ["ưng", "uhn"], ["uổi", "uoih"], ["ổng", "ohng"], ["ống", "ong'"], ["ình", "inn"],
+        ["ắng", "ang'"], ["ánh", "ank'"], ["ầm", "amn"], ["iêm", "iem"],   ["uồn", "uon"], ["uộn", "uonj"],
+         ["ướu", "uou'"], ["ưởi", "uoih"],
 
     // 2 letters
     ["ận", "enj"],    ["ác", "ak"],    ["tr", "ch"],    ["áy", "ay'"],        ["át", "at"],        ["ữa", "uax"],
     ['ây', 'ay'],    ['ội', 'oij'],    ['ằm', 'umn'],    ['là', 'la'],    ['ột', 'otj'],    ["ới", "er'i"],
     ["ẩm", "uhm"],    ["án", "a'n"],        ["ăm", "um"],        ["ập", "upj"],    ["ực", "ucj"],    ["ắn", "un'"],
-    ["ái", "ai'"],    ["ật", "utj"],    ["ời", "er'n"],    ["âu", "au"],    ["ớp", "erp"],    ["ất", "ut"],
+    ["ái", "ai'"],    ["ật", "atj"],    ["ời", "er'i"],    ["âu", "au"],    ["ớp", "erp"],    ["ất", "ut"],
     ["ầu", "aun"], ["ấn", "ern'"], ["ắm", "um'"], ["ắc", "uk"], ["ía", "ia'"], ["ồm", "ohmn"], ["ạt", "atj"],
      ["ặc", "acj"], ["áo", "ao'"], ["ởi", "oih"], ["áp", "ap"], ["ph", "f"], ["ửa", "uah"], ["êu", "eu"],
-     ["ốc", "ok"],
+     ["ốc", "ok"], ["ớn", "er'"], ["gi", "j"], ["úc", "uk"], ["ấp", "ap"], ["ẫu", "aux"], ["ần", "ern"],
+      ["ẫn", "anx"], ["ấy", "ay"], ["ôi", "oi"], ["\x20nh", "\x20y"], ["ợp", "erp"], ["ưu", "uu"],
+       ["ốt", "ot"], ["ớm", "erm'"], ["ức", "uk"], ["ổi", "oi"], ["ắt", "ut"], ["ịp", "ipj"],
+        ["ưa", "ua"], ["\x20tr", "\x20j"],  ["\x20ch", "\x20j"], ["ấu", "au'"], ["ậu", "auj"],
+         ["ồi", "oi'n"], ["ắp", "up"], ["ừa", "ua'n"], ["ộn", "onj"],
 
     // 1 letter
     ["ế", "e'"],    ["ứ", "uh'"],    ["ó", "o'"],    ["ố", "oh'"],    ["ữ", "ux"],    ["é", "e'"],
-     ["á", "a'"],
+     ["á", "a'"], ["ở", "er"], ["ú", "u'"], ["ự", "uj"], ["í", "i'"], ["ệ", "ej"],
   ].sort((a, b) => b[0].length - a[0].length);
 
   function applySpecialRules(text) {
