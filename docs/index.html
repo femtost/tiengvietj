@@ -334,7 +334,7 @@
 <header>
   <div class="eyebrow">Chuyển đổi ngữ âm · Phonetic Transliteration</div>
   <h1>Tiếng Việt → <em>Tiengvietj</em></h1>
-  <p>Paste Vietnamese text with diacritics on the left. Press the seal to convert it into a tone-mark-free, English-alphabet phonetic form on the right.</p>
+  <p>EXPERIMENTAL: Paste Vietnamese text with diacritics on the left. Press the seal to convert it into a tone-mark-free, English-alphabet phonetic form on the right.</p>
 </header>
 
 <main>
@@ -441,63 +441,25 @@
 
   const SPECIAL_RULES = [
     // 4 letters
+     ["ượng", "uongj"],
 
     // 3 letters
-    ['iệt', 'ietj'],
-    ["ướm", "uer'm"],
-    ["iện", "ienj"],
-    ["uất", "uat"],
-    ["uật", "uatj"],
-    ["ngh", "ng"],
-    ["iên", "ien"],
-    ["ười", "er'i"],
-    ["ứng", "uhn'"],
-    ["uộc", "uocj"],
-    ["iểu", "ieuh"],
-    ["ách", "ack"],
-    ["ính", "ink'"],
-    ["ũng", "ungx"],
-    ["iễn", "ienx"],
-    ["ược", "uocj"],
-    ["ững", "unx"],
-    ["ước", "uok"],
-    ["ích", "ik"],
-    ["uyển", "uenh"],
+    ['iệt', 'ietj'],    ["ướm", "uer'm"],    ["iện", "ienj"],    ["uất", "uat"],    ["uật", "uatj"],    ["ngh", "ng"],
+    ["iên", "ien"],    ["ười", "er'i"],    ["ứng", "uhn'"],    ["uộc", "uocj"],    ["iểu", "ieuh"],    ["ách", "ack"],
+    ["ính", "ink'"],    ["ũng", "ungx"],   ["iễn", "ienx"],    ["ược", "uocj"],    ["ững", "unx"],    ["ước", "uok"],
+    ["ích", "ik"],    ["uyển", "uenh"], ["uyện", "uenj"], ["uần", "uann"], ["uôn", "uon"], ["ịch", "icj"],
+     ["iển", "ienh"], ["uyện", "uenj"], ["ương", "uong"], ["iền", "ienn"], ["iệu", "ieuj"], ["uốc", "uok"],
+     ["iều", "ieun"],
 
     // 2 letters
-    ["ận", "enj"],
-    ["ác", "ak"],
-    ["tr", "ch"],
-    ["áy", "ay'"],    
-    ["át", "at"],    
-    ["ữa", "uax"],
-    ['ây', 'ay'],
-    ['ội', 'oij'],
-    ['ằm', 'umn'],
-    ['là', 'la'],
-    ['ột', 'otj'],
-    ["ới", "er'i"],
-    ["ẩm", "uhm"],
-    ["án", "a'n"],    
-    ["ăm", "um"],    
-    ["ập", "upj"],
-    ["ực", "ucj"],
-    ["ắn", "un'"],
-    ["ái", "ai'"],
-    ["ật", "utj"],
-    ["ời", "er'n"],
-    ["âu", "au"],
-    ["ớp", "erp"],
-    ["ất", "ut"],
-    ["ầu", "aun"],
+    ["ận", "enj"],    ["ác", "ak"],    ["tr", "ch"],    ["áy", "ay'"],        ["át", "at"],        ["ữa", "uax"],
+    ['ây', 'ay'],    ['ội', 'oij'],    ['ằm', 'umn'],    ['là', 'la'],    ['ột', 'otj'],    ["ới", "er'i"],
+    ["ẩm", "uhm"],    ["án", "a'n"],        ["ăm", "um"],        ["ập", "upj"],    ["ực", "ucj"],    ["ắn", "un'"],
+    ["ái", "ai'"],    ["ật", "utj"],    ["ời", "er'n"],    ["âu", "au"],    ["ớp", "erp"],    ["ất", "ut"],
+    ["ầu", "aun"], ["ấn", "ern'"], ["ắm", "um'"], ["ắc", "uk"], ["ía", "ia'"], ["ồm", "ohmn"], ["ạt", "atj"],
 
     // 1 letter
-    ["ế", "e'"],
-    ["ứ", "uh'"],
-    ["ó", "o'"],
-    ["ố", "oh'"],
-    ["ữ", "ux"],
-    ["é", "e'"],
+    ["ế", "e'"],    ["ứ", "uh'"],    ["ó", "o'"],    ["ố", "oh'"],    ["ữ", "ux"],    ["é", "e'"],
   ].sort((a, b) => b[0].length - a[0].length);
 
   function applySpecialRules(text) {
